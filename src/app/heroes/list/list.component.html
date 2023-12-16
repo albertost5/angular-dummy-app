@@ -1,0 +1,13 @@
+<ul class='mt-2 list-group'>
+  <li *ngFor='let hero of heroNames' class='list-group-item'>{{ hero }}</li>
+</ul>
+
+<p class='mt-4' *ngIf='!heroDeleted; else deleteBlock;'>Click the button to start deleting heroes.</p>
+
+<button (click)='deleteLastHero()' *ngIf='heroNames.length > 0' class='btn btn-outline-danger mt-2'>
+  Delete hero
+</button>
+
+<ng-template #deleteBlock>
+  <p class='mt-2'>Hero deleted: <small class='text-danger'>{{ heroDeleted }}</small></p>
+</ng-template>

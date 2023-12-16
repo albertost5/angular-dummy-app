@@ -10,12 +10,12 @@ export class CounterComponent {
 
   increase(): void {
     this.counter++;
-    this.toggleDisabled();
+    // this.toggleDisabled();
   }
 
   decrease(): void {
     this.counter--;
-    this.toggleDisabled();
+    // this.toggleDisabled();
   }
 
   reset(): void {

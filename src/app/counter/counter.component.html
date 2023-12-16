@@ -1,4 +1,4 @@
 <p>Counter: {{ counter }}</p>
 <button (click)="increase()">+1</button>
 <button (click)="reset()">Reset</button>
-<button (click)="decrease()" [disabled]="isDescreaseDisabled">-1</button>
+<button (click)="decrease()" [disabled]="counter === 0">-1</button>
